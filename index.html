@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionamento do SE SUITE</title>
+    <!--Estilizadando a pagina -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url(https://memivi.com.br/wp-content/webp-express/webp-images/uploads/2021/03/960x440_evento-43575-banner-768x352.png.webp);
+            background-size: cover;
+            background-position: center;
+            
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            margin-top: 20rem;
+        }
+        .container.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h1 {
+            color: #292929;
+        }
+        p {
+            color: #4c4c4c;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<!--Corpo da Pagina-->
+<body>
+    <div class="container">
+        <h1>ATUALIZAÇÃO DO SE SUITE</h1>
+        <p>O sistema <b>SE SUITE</b>  foi atualizado para um novo endereço. Clique no botão abaixo para ser redirecionado:</p>
+        <a href="https://se.sebraerondonia.com.br/softexpert/login" class="btn">Ir para o novo endereço</a>
+    </div>
+    
+    <!--colocando efeito js */-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var container = document.querySelector('.container');
+            setTimeout(function() {
+                container.classList.add('show');
+            }, 100);
+        });
+    </script>
+</body>
+</html>
